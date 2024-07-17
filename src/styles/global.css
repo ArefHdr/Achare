@@ -1,0 +1,98 @@
+body {
+    font-family: Vazir;
+    direction: rtl;
+}
+
+:root {
+    --font-size-xsm: 10px;
+    --font-size-sm: 12px;
+    --font-size-md: 14px;
+    --font-size-lg: 16px;
+
+    --main-text-color: #37474F;
+    --error-color: #E61236;
+    --primary-color: #00BFA5;
+    --main-bottom-box-shadow: 0px 0px 4px 0px #00000026;
+    --main-font-weight: 700;
+}
+/* custom container */
+.custom-container {
+    width: 60%;
+    margin: 0 auto;
+}
+
+/*widgest*/
+.widget-holder {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    position: absolute;
+    z-index: -109;
+    bottom: 0;
+    top: 54px;
+    background: #F5F5F5;
+}
+
+.widget {
+    margin-top: 1.5rem;
+    background: #F5F5F5;
+}
+
+.widget-title {
+    color: var(--main-text-color);
+    font-size: var(--font-size-lg);
+    margin-bottom: 9px;
+}
+
+.widget-content {
+    background: #fff;
+    padding: 1.1rem 1rem;
+    border-radius: 4px;
+    margin-bottom: 12px;
+}
+
+.widget-row {
+    row-gap: 1rem;
+    align-items: center;
+}
+
+.widget-footer {
+    position: sticky;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 80px;
+    z-index: 1000;
+    background: white;
+    box-shadow: 0px -1px 6px 0px #00000026;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* main button style */
+.custom-btn {
+    border-radius: 4px;
+    border: none;
+    outline: none;
+}
+/* media queries*/
+@media screen and (min-width: 768px) {
+    .widget-content {
+        padding: 32px 40px;
+    }
+
+    .widget-row {
+        row-gap: 2rem;
+    }
+
+    .widget-footer {
+        height: 84px;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .widget-footer {
+        position: fixed;
+    }
+}
