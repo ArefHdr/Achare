@@ -1,5 +1,5 @@
 <template>
-  <button class="custom-btn secondary-btn" type="submit">
+  <button class="button button--secondary" type="submit">
     مشاهده اطلاعات
   </button>
 </template>
@@ -7,7 +7,7 @@
 
 </script>
 <style scoped>
-.secondary-btn {
+.button--secondary {
   background: transparent;
   border: 1px solid var(--primary-color);
   color: var(--primary-color);

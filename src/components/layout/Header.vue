@@ -1,10 +1,10 @@
 <template>
   <header>
-    <nav class="header-nav">
+    <nav class="header__nav">
       <div class="container">
         <div class="row justify-content-between align-items-center">
           <div class="col-6">
-            <div class="nav-right nav-logo d-flex ">
+            <div class="header__nav-right header__nav-logo d-flex ">
               <svg width="45" height="25" viewBox="0 0 45 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g clip-path="url(#clip0_3363_486)">
                   <path fill-rule="evenodd" clip-rule="evenodd"
@@ -41,7 +41,7 @@
             </div>
           </div>
           <div class="col-6">
-            <div class="nav-left nav-links d-flex justify-content-end gap-3">
+            <div class="header__nav-left header__nav-links d-flex justify-content-end gap-3">
               <router-link to="/address-registration">ثبت آدرس</router-link>
               <router-link to="/address-list">مشاهده آدرس ها</router-link>
             </div>
@@ -56,13 +56,13 @@
 </script>
 
 <style scoped>
-.header-nav {
+.header__nav {
   width: 100%;
   box-shadow: var(--main-bottom-box-shadow);
   padding: 14px 0;
 }
 
-.nav-links a {
+.header__nav-links a {
   color: var(--main-text-color);
   font-size: var(--font-size-sm);
   font-weight: var(--main-font-weight);
@@ -72,7 +72,7 @@
   color: var(--primary-color) !important;
 }
 @media screen and (min-width: 768px) {
-  .nav-links a {
+  .header__nav-links a {
     font-size: var(--font-size-md);
   }
 }

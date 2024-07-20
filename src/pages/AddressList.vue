@@ -2,77 +2,77 @@
   <Loading class="mt-3" v-if="loading"></Loading>
   <section v-else class="widget-holder">
     <div class="widget" :class="containerClass">
-      <div class="widget-title">
+      <div class="widget__title">
         <h3>آدرس ها و مشخصات</h3>
       </div>
-      <div v-for="address in addresses" :key="address.id" class="widget-content">
-        <div class="row widget-row">
-          <div class="col-12 col-sm-6 col-md-4 show-full-name-sm">
+      <div v-for="address in addresses" :key="address.id" class="widget__content">
+        <div class="row widget__row">
+          <div class="col-12 col-sm-6 col-md-4 widget__info--full-name-sm">
             <div class="user-info">
-              <div class="user-info-title">
+              <div class="user-info__title">
                 <span>نام و نام خانوادگی</span>
               </div>
-              <div class="user-info-content">
+              <div class="user-info__content">
                 <strong>{{ address.first_name }} {{ address.last_name }}</strong>
               </div>
             </div>
           </div>
-          <div class="col-12 col-sm-6 col-md-4 show-full-name-md">
+          <div class="col-12 col-sm-6 col-md-4 widget__info--full-name-md">
             <div class="user-info">
-              <div class="user-info-title">
+              <div class="user-info__title">
                 <span>نام</span>
               </div>
-              <div class="user-info-content">
+              <div class="user-info__content">
                 <strong>{{ address.first_name }}</strong>
               </div>
             </div>
           </div>
-          <div class="col-12 col-sm-6 col-md-4 show-full-name-md">
+          <div class="col-12 col-sm-6 col-md-4 widget__info--full-name-md">
             <div class="user-info">
-              <div class="user-info-title">
+              <div class="user-info__title">
                 <span>نام و نام خانوادگی</span>
               </div>
-              <div class="user-info-content">
+              <div class="user-info__content">
                 <strong>{{ address.last_name }}</strong>
               </div>
             </div>
           </div>
           <div class="col-12 col-sm-6 col-md-4">
             <div class="user-info">
-              <div class="user-info-title">
+              <div class="user-info__title">
                 <span>جنسیت</span>
               </div>
-              <div class="user-info-content">
+              <div class="user-info__content">
                 <strong>آقا</strong>
               </div>
             </div>
           </div>
           <div class="col-12 col-sm-6 col-md-4">
             <div class="user-info">
-              <div class="user-info-title">
+              <div class="user-info__title">
                 <span>شماره تلفن همراه</span>
               </div>
-              <div class="user-info-content">
+              <div class="user-info__content">
                 <strong>{{ address.coordinate_mobile }}</strong>
               </div>
             </div>
           </div>
           <div class="col-12 col-sm-6 col-md-4">
-            <div class="user-info user-info-phone">
-              <div class="user-info-title">
+            <div class="user-info user-info--phone">
+              <div class="user-info__title">
                 <span>شماره تلفن ثابت</span>
               </div>
-              <div class="user-info-content">
+              <div class="user-info__content">
                 <strong>{{ address.coordinate_phone_number }}</strong>
               </div>
             </div>
           </div>
           <div class="col-12 col-sm-6 col-md-4">
-            <div class="user-info-address flex-column">
-              <div class="user-info-title">
+            <div class="user-info--address flex-column">
+              <div class="user-info__title">
                 <span>آدرس</span>
               </div>
-              <div class="user-info-content">
+              <div class="user-info__content">
                 <strong>{{ address.address }}</strong>
               </div>
             </div>
@@ -119,22 +119,22 @@ fetchAddresses()
   align-items: center;
 }
 
-.user-info-title {
+.user-info__title {
   color: #9B9B9B;
   font-size: var(--font-size-md);
   font-weight: 400;
 }
 
-.user-info-content {
+.user-info__content {
   color: var(--main-text-color);
   font-size: var(--font-size-md);
 }
 
-.show-full-name-md {
+.widget__info--full-name-md {
   display: none;
 }
 
-.user-info-phone {
+.user-info--phone {
   border-bottom: 1px solid #E0E0E0;
   padding: 0 0 12px 0;
 }
@@ -146,15 +146,15 @@ fetchAddresses()
     gap: 14px;
   }
 
-  .show-full-name-sm {
+  .widget__info--full-name-sm {
     display: none;
   }
 
-  .show-full-name-md {
+  .widget__info--full-name-md {
     display: block;
   }
 
-  .user-info-phone {
+  .user-info--phone {
     border: none;
     padding: 0;
   }

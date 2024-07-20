@@ -3,29 +3,29 @@
   <!--  اگر وضعیت عبور تایید شد به صفحه تایید اطلاعات میرود-->
   <section v-else class="widget-holder ">
     <div class="widget" :class="containerClass">
-      <div class="widget-title">
+      <div class="widget__title">
         <i @click="goBack" class="bi-arrow-right"></i>
         <h3>انتخاب آدرس</h3>
       </div>
-      <div class="widget-content">
-        <div class="map-title">
-          <div class="map-title-back">
+      <div class="widget__content">
+        <div class="widget__map-title">
+          <div class="widget__map-title-back-btn">
             <i @click="goBack" class="bi-arrow-right"></i>
           </div>
-          <div class="map-title-text">
+          <div class="widget__map-title-text">
             <strong>انتخاب موقعیت</strong>
           </div>
         </div>
         <div class="">
-          <p class="form-title mb-3">لطفا مشخصات و آدرس خود را وارد کنید</p>
+          <p class="widget__form-title mb-3">لطفا مشخصات و آدرس خود را وارد کنید</p>
         </div>
-        <div ref="mapContainer" class="map-container"></div>
+        <div ref="mapContainer" class="widget__map-container"></div>
       </div>
     </div>
-    <footer class="widget-footer">
+    <footer class="widget__footer">
       <div class="row">
         <div class="col-12">
-          <div class="widget-submit">
+          <div class="widget__submit">
             <LoadingButton v-if="loading"></LoadingButton>
             <base-button v-else @click="addAddress"></base-button>
           </div>
@@ -34,6 +34,7 @@
     </footer>
   </section>
 </template>
+
 <script setup>
 import useAddressStore from "@/store/addresses.js";
 import {onBeforeUnmount, onMounted, ref} from 'vue';
@@ -94,13 +95,13 @@ onBeforeUnmount(() => {
 </script>
 
 <style scoped>
-.map-container {
+.widget__map-container {
   width: 100%;
   height: 100%;
   position: absolute;
 }
 
-.map-title {
+.widget__map-title {
   display: flex;
   padding: 9px 18px;
   background: rgb(255 255 255 / 79%);
@@ -110,27 +111,27 @@ onBeforeUnmount(() => {
   right: 0;
 }
 
-.widget-title {
+.widget__title {
   display: none;
   gap: 8px;
   align-items: center;
   font-size: var(--font-size-lg);
 }
 
-.map-title-back {
+.widget__map-title-back-btn {
   position: absolute;
 }
 
-.map-title-text {
+.widget__map-title-text {
   margin: 0 auto;
 }
 
-.form-title {
+.widget__form-title {
   display: none;
   padding: 15px 15px 0 0;
 }
 
-.widget-content {
+.widget__content {
   padding: 0;
 }
 
@@ -142,25 +143,22 @@ onBeforeUnmount(() => {
 }
 
 @media screen and (min-width: 576px) {
-  .widget-title {
+  .widget__title {
     display: flex;
   }
 
-  .map-title {
+  .widget__map-title {
     display: none;
   }
 
-  .form-title {
+  .widget__form-title {
     display: block;
   }
 
-  .map-container {
+  .widget__map-container {
     height: 50vh;
     position: relative;
   }
 }
 
-@media screen and (min-width: 992px) {
-
-}
 </style>

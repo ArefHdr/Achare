@@ -1,14 +1,14 @@
 <template>
   <section class="widget-holder">
     <div class="widget" :class="containerClass">
-      <div class="widget-title">
+      <div class="widget__title">
         <h3>ثبت آدرس</h3>
       </div>
-      <div class="widget-content">
+      <div class="widget__content">
         <form class="widget-form">
-          <div class="row widget-row">
+          <div class="row widget__row">
             <div class="col-12">
-              <p class="form-title">لطفا مشخصات و آدرس خود را وارد کنید</p>
+              <p class="widget__form-title">لطفا مشخصات و آدرس خود را وارد کنید</p>
             </div>
             <div class="col-12 col-sm-6 col-md-6 col-lg-4">
               <div class="form-items">
@@ -100,10 +100,10 @@
         </form>
       </div>
     </div>
-    <footer class="widget-footer">
+    <footer class="widget__footer">
       <div class="row">
         <div class="col-12">
-          <div class="widget-submit">
+          <div class="widget__submit">
             <base-button :disable-status="isDisable" @click="submitForm"></base-button>
           </div>
         </div>
@@ -198,7 +198,7 @@ onBeforeUnmount(() => {
 </script>
 
 <style scoped>
-.form-title {
+.widget__form-title {
   font-size: 12px;
   color: var(--main-text-color);
 }
@@ -239,7 +239,7 @@ onBeforeUnmount(() => {
   cursor: pointer;
 }
 
-.widget-submit {
+.widget__submit {
   width: 100%;
   display: flex;
   justify-content: center;
@@ -248,7 +248,7 @@ onBeforeUnmount(() => {
 }
 
 @media screen and (min-width: 768px) {
-  .form-title {
+  .widget__form-title {
     font-size: var(--font-size-lg);
   }
 
@@ -256,7 +256,7 @@ onBeforeUnmount(() => {
     font-size: var(--font-size-md);
   }
 
-  .widget-submit {
+  .widget__submit {
     height: 84px;
   }
 }

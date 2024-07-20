@@ -1,5 +1,5 @@
 <template>
-  <button class="custom-btn submit-btn" type="submit">
+  <button class="button button--submit" type="submit">
     <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
   </button>
 </template>
@@ -7,7 +7,7 @@
 
 </script>
 <style scoped>
-.submit-btn {
+.button--submit {
   background: var(--primary-color);
   color: white;
   padding: 12px 96px;
