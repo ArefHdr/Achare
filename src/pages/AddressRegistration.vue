@@ -164,6 +164,8 @@ const submitForm = () => {
     lat: null,
     lng: null,
     gender: genderValue.value,
+    address_id: "test",
+    id: 1
   })
   addressStore.addNewAddressInfo(formData)
   router.push({path: '/address-registration/map'})
